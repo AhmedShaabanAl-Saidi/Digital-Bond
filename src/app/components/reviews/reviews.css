@@ -1,0 +1,19 @@
+#reviews img {
+    border: .1875rem solid #EB2A24;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #EB2A24;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 50%;
+}
+
+.card-body img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}

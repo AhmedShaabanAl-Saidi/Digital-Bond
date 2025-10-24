@@ -16,3 +16,7 @@
     background-color: #000;
     color: #fff;
 }
+
+.red-fillter {
+    filter: invert(26%) sepia(86%) saturate(7476%) hue-rotate(354deg) brightness(95%) contrast(101%);
+}
