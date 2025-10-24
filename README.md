@@ -1,14 +1,18 @@
-🛠️ Tech Stack:
-Framework: Angular 20
-Languages: HTML5, CSS3, TypeScript
-Styling: Bootstrap / CSS
-Tools: Node.js, Angular CLI, Git & GitHub
+## 🛠️ Tech Stack
 
+- **Framework:** Angular 20  
+- **Languages:** HTML5, CSS3, TypeScript  
+- **Styling:** Bootstrap / CSS  
+- **Tools:** Node.js, Angular CLI, Git & GitHub  
 
-Clone the repository:
+---
+
+## 📦 Clone the Repository
+
+```bash
 git clone https://github.com/AhmedShaabanAl-Saidi/Digital-Bond.git
 
-Folder Structure:
+📁 Folder Structure
 Digital-Bond/
 │
 ├── src/
@@ -24,5 +28,5 @@ Digital-Bond/
 ├── angular.json          # Angular configuration
 └── README.md             # Project documentation
 
-Live Demo:
+🌍 Live Demo
 🔗 https://digital-bond-one.vercel.app/
