@@ -19,6 +19,16 @@
     background: linear-gradient(90deg, #EB2A24, #FF5E57);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        filter: drop-shadow(0 0 5px rgba(235, 42, 36, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 20px rgba(235, 42, 36, 0.8));
+    }
 }
 
 .hero-section .btn-danger {
@@ -45,8 +55,13 @@
 }
 
 .floating-img {
-    animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite, pulse 4s ease-in-out infinite;
     max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.floating-img:hover {
+    transform: scale(1.05) rotate(2deg);
 }
 
 @keyframes float {

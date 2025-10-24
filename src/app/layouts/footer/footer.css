@@ -1,21 +1,63 @@
 ul li {
     text-decoration: none !important;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     margin-top: 0.9375rem;
+    position: relative;
+    width: fit-content;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #EB2A24;
+    transition: width 0.3s ease;
+}
+
+ul li:hover::before {
+    width: 100%;
 }
 
 ul li:hover {
-    text-decoration: underline !important;
+    text-decoration: none !important;
     cursor: pointer;
+    color: #ffffff;
+    transform: translateX(10px);
 }
 
 .footer-rights .terms span {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-rights .terms span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #EB2A24;
+    transition: width 0.3s ease;
+}
+
+.footer-rights .terms span:hover::before {
+    width: 100%;
 }
 
 .footer-rights .terms span:hover {
     cursor: pointer;
-    text-decoration: underline !important;
+    text-decoration: none !important;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.quick-links a{
+    color: white;
+    text-decoration: none;
 }
 
 @media (max-width: 575.98px) {
