@@ -211,3 +211,20 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
+
+.titles h2 {
+    color: #2c3e50;
+    position: relative;
+}
+
+.titles h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #EB2A24, #FF5E57);
+    border-radius: 2px;
+}
