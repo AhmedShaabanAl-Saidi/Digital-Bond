@@ -1,0 +1,19 @@
+.about-us-title {
+    color: #EC2924;
+}
+
+.red-image {
+    filter: invert(26%) sepia(86%) saturate(7476%) hue-rotate(354deg) brightness(95%) contrast(101%);
+}
+
+@media (max-width: 767.98px) {
+
+    .vision-img img,
+    .Values-img img {
+        width: 1.875rem;
+    }
+
+    .about-section p {
+        font-size: .625rem !important;
+    }
+}
