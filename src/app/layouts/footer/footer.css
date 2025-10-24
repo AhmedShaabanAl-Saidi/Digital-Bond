@@ -1,0 +1,32 @@
+ul li {
+    text-decoration: none !important;
+    transition: all 0.5s ease;
+    margin-top: 0.9375rem;
+}
+
+ul li:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.footer-rights .terms span {
+    transition: all 0.5s ease;
+}
+
+.footer-rights .terms span:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+@media (max-width: 575.98px) {
+    footer {
+        font-size: .625rem !important;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer {
+        font-size: small;
+    }
+}

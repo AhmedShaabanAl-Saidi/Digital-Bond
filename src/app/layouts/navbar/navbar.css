@@ -10,22 +10,3 @@
 .navbar-toggler {
     filter: invert(1);
 }
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.1875rem;
-    height: 2.1875rem;
-    background-color: #fff;
-    border-radius: 50%;
-    color: #000;
-    font-size: 1.25rem;
-    transition: all 0.5s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background-color: #000;
-    color: #fff;
-}
