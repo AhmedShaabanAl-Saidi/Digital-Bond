@@ -5,7 +5,7 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-// import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -16,6 +16,11 @@ import {
 })
 export class ContactUs {
   isLoading: boolean = false;
+
+
+  constructor(
+    private _ToastrService: ToastrService
+  ) { }
 
   contactForm: FormGroup = new FormGroup({
     name: new FormControl(null, [
@@ -44,7 +49,7 @@ export class ContactUs {
 
       setTimeout(() => {
         this.isLoading = false;
-        // this._ToastrService.success('Message sent successfully! We will get back to you.', 'Success');
+        this._ToastrService.success('Message sent successfully! We will get back to you.', 'Success');
 
         // Reset form
         this.contactForm.reset();
