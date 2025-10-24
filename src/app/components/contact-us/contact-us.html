@@ -1,1 +1,150 @@
-<p>contact-us works!</p>
+<section class="contact-us-form py-5 my-lg-5 text-capitalize fw-semibold">
+    <div class="container">
+        <div class="contact-us-form-text">
+            <h3 class="fw-semibold">Feel free to talk with us, we're all ears!</h3>
+            <p class="text-muted fw-normal">Fill the form and our team will get back to you within 24 hours.</p>
+
+            <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()"
+                class="mt-4 shadow rounded-4 overflow-hidden">
+                <div class="row">
+                    <!-- Left Form -->
+                    <div class="col-md-6 form-inputs order-1 order-md-0">
+                        <div class="p-4 d-flex flex-column gap-3">
+                            <h3 class="fw-semibold">Fill Up The Form</h3>
+
+                            <!-- Name Field -->
+                            <div class="input-group position-relative">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" class="form-control inputs rounded-4 ps-5" placeholder="Name"
+                                    formControlName="name" aria-label="name">
+                            </div>
+                            @if (contactForm.get('name')?.errors && contactForm.get('name')?.touched) {
+                            <div class="text-danger small">
+                                @if (contactForm.get('name')?.errors?.['required']) {
+                                <p class="m-0">Name is required</p>
+                                } @else if (contactForm.get('name')?.errors?.['minlength']) {
+                                <p class="m-0">Name must be at least 2 characters</p>
+                                } @else if (contactForm.get('name')?.errors?.['maxlength']) {
+                                <p class="m-0">Name must not exceed 50 characters</p>
+                                }
+                            </div>
+                            }
+
+                            <!-- Email Field -->
+                            <div class="input-group position-relative">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" class="form-control inputs rounded-4 ps-5" placeholder="Email"
+                                    formControlName="email" aria-label="email">
+                            </div>
+                            @if (contactForm.get('email')?.errors && contactForm.get('email')?.touched) {
+                            <div class="text-danger small">
+                                @if (contactForm.get('email')?.errors?.['required']) {
+                                <p class="m-0">Email is required</p>
+                                } @else if (contactForm.get('email')?.errors?.['email']) {
+                                <p class="m-0">Please enter a valid email address</p>
+                                }
+                            </div>
+                            }
+
+                            <!-- Phone Field -->
+                            <div class="input-group position-relative">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" class="form-control inputs rounded-4 ps-5" placeholder="Phone"
+                                    formControlName="phone" aria-label="Phone">
+                            </div>
+                            @if (contactForm.get('phone')?.errors && contactForm.get('phone')?.touched) {
+                            <div class="text-danger small">
+                                @if (contactForm.get('phone')?.errors?.['required']) {
+                                <p class="m-0">Phone is required</p>
+                                } @else if (contactForm.get('phone')?.errors?.['pattern']) {
+                                <p class="m-0">Please enter a valid phone number</p>
+                                }
+                            </div>
+                            }
+
+                            <!-- Message Field -->
+                            <div class="input-group position-relative">
+                                <i class="fa-solid fa-comment"></i>
+                                <textarea class="form-control inputs rounded-4 ps-5" placeholder="Message"
+                                    formControlName="message" aria-label="message" rows="3"></textarea>
+                            </div>
+                            @if (contactForm.get('message')?.errors && contactForm.get('message')?.touched) {
+                            <div class="text-danger small">
+                                @if (contactForm.get('message')?.errors?.['required']) {
+                                <p class="m-0">Message is required</p>
+                                } @else if (contactForm.get('message')?.errors?.['minlength']) {
+                                <p class="m-0">Message must be at least 10 characters</p>
+                                } @else if (contactForm.get('message')?.errors?.['maxlength']) {
+                                <p class="m-0">Message must not exceed 500 characters</p>
+                                }
+                            </div>
+                            }
+
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="btn btn-dark text-white rounded-3 mt-4 fs-6 fw-semibold py-3 text-capitalize"
+                                [disabled]="isLoading || contactForm.invalid">
+                                @if (!isLoading) {
+                                <span><i class="fa-solid fa-paper-plane me-2"></i> Send Message</span>
+                                } @else {
+                                <span>
+                                    <span class="spinner-border spinner-border-sm me-2" role="status"
+                                        aria-hidden="true"></span>
+                                    Sending...
+                                </span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Contact Info -->
+                    <div class="col-md-6 bg-dark form-contacts order-0 order-md-1">
+                        <div class="p-4 text-white d-flex flex-column gap-4">
+                            <h3 class="fw-semibold">Contact Information</h3>
+
+                            <!-- Email -->
+                            <div class="Contact-email d-flex flex-column gap-2">
+                                <div class="info d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <h5 class="my-0">Email</h5>
+                                </div>
+                                <div class="details">
+                                    <a href="mailto:Bonder@digitalbondmena.com" class="text-white">
+                                        Bonder@digitalbondmena.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="Contact-phone d-flex flex-column gap-2">
+                                <div class="info d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <h5 class="my-0">Phone</h5>
+                                </div>
+                                <div class="details">
+                                    <a href="tel:+201021551322" class="text-white">
+                                        +2 01021551322
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="Contact-location d-flex flex-column gap-2">
+                                <div class="info d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <h5 class="my-0">Location</h5>
+                                </div>
+                                <div class="details">
+                                    <a href="https://www.google.com/maps?q=11+Ahmed+Al+Shatouri,+Ad+Dokki,+Giza+Governorate"
+                                        target="_blank" rel="noopener" class="text-white">
+                                        11 Ahmed Al Shatouri, Ad Dokki, Giza Governorate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

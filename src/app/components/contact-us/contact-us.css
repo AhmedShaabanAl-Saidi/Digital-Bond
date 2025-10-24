@@ -1,0 +1,88 @@
+.form-inputs {
+    background-color: #F9FAFB;
+}
+
+.inputs {
+    padding: 12px 15px 12px 45px;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:hover,
+.form-control:focus {
+    border-color: #111;
+    box-shadow: none;
+    outline: none;
+}
+
+.inputs::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.input-group:has(textarea) i {
+    top: 20px;
+    transform: none;
+}
+
+.form-contacts {
+    background-color: #111;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.form-contacts i {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.form-contacts a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.form-contacts a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .inputs {
+        padding: 12px 15px 12px 45px;
+        font-size: 0.9rem;
+    }
+
+    .input-group i {
+        left: 15px;
+        font-size: 0.95rem;
+    }
+
+    .input-group:has(textarea) i {
+        top: 18px;
+    }
+
+    .inputs::placeholder {
+        font-size: 0.85rem;
+    }
+
+    .form-contacts {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+}
