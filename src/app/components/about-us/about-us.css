@@ -3,22 +3,26 @@
     animation: bounce 2s ease-in-out infinite;
 }
 
-.vision, .Values {
+.vision,
+.Values {
     transition: all 0.3s ease;
+    padding: 8px;
 }
 
-.vision:hover, .Values:hover {
+.vision:hover,
+.Values:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 15px;
 }
 
-.vision-img img, .Values-img img {
+.vision-img img,
+.Values-img img {
     transition: transform 0.3s ease;
 }
 
-.vision-img img:hover, .Values-img img:hover {
+.vision-img img:hover,
+.Values-img img:hover {
     transform: rotate(10deg) scale(1.1);
 }
 

@@ -17,3 +17,7 @@
     height: 80px;
     object-fit: cover;
 }
+
+#reviews .card-body {
+    min-height: 18.75rem !important;
+}

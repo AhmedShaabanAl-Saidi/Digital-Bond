@@ -8,7 +8,12 @@
     border-radius: 0.5rem;
     font-size: 0.95rem;
     color: #333;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.inputs.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    background-color: #fff5f5;
 }
 
 .form-control:hover,
@@ -41,6 +46,31 @@
 .input-group:has(textarea) i {
     top: 20px;
     transform: none;
+}
+
+.error-message {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    color: #dc3545;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 5;
+    background: linear-gradient(to bottom, rgba(255, 245, 245, 0.95), transparent);
+    padding: 2px 4px;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-contacts {

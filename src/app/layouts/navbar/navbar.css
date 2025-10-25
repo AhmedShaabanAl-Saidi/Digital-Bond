@@ -38,8 +38,26 @@
 .navbar-toggler {
     filter: invert(1);
     transition: transform 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:not(.collapsed) {
+    transform: rotate(90deg);
+}
+
+.navbar-toggler.collapsed {
+    transform: rotate(0deg);
 }
 
 .navbar-toggler:hover {
-    transform: rotate(90deg);
+    opacity: 0.8;
+}
+
+.navbar-collapse {
+    transition: height 0.35s ease;
 }
